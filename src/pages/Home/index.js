@@ -20,12 +20,13 @@ export default function Home(){
     }
 
     function inserir(e){
-
-
         e.preventDefault()
+        contLocais()
+        console.log(locais)
         local1.push(insere)
+        setLocais([])
         setResult('inserido '+ insere)
-
+        alert(local1)
 
     }
 
@@ -59,10 +60,10 @@ export default function Home(){
             <h2> {result} </h2>
             <br/>
             <h3>
-                Local 1 : (base) {local1} (topo) <br/>
-                Local 2 : (base) {local2} (topo) <br/>
-                Local 3 : (base) {local3} (topo) <br/>
-                Local 4 : (base) {local4} (topo) <br/>
+                Local 1 : (base) {local1.toString} (topo) <br/>
+                Local 2 : (base) {local2.toString} (topo) <br/>
+                Local 3 : (base) {local3.toString} (topo) <br/>
+                Local 4 : (base) {local4.toString} (topo) <br/>
             </h3>
         </div>
     );
